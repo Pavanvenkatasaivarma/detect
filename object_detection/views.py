@@ -15,7 +15,7 @@ videoCap = None
 def start_camera():
     global videoCap, camera_running
     if not camera_running:
-        videoCap = cv2.VideoCapture(0)  # Open the webcam
+        videoCap = cv2.VideoCapture(1)  # Open the webcam
         camera_running = True
 
 # Stop camera stream
