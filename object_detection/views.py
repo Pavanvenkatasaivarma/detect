@@ -91,7 +91,8 @@ def generate_frames(request):
                     label_distance = f'Distance: {distance:.2f}m '
                     label_width = f'W: {width_in_meters:.2f}m '
                     label_height = f'H: {height_in_meters:.2f}m'
-
+                    
+                    cv2.imshow("Frame", frame)
                     # put the class name, confidence, distance, width, and height on the image
                     cv2.putText(frame, label_class, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, class_color, 2)
                     cv2.putText(frame, label_confidence, (x1, y1 + 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, confidence_color, 2)
