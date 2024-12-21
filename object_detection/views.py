@@ -10,12 +10,13 @@ from django.http import HttpResponseRedirect
 # Global variable to control camera state
 camera_running = False
 videoCap = None
+camera_url = "http://192.168.1.12:5000/video_feed"
 
 # Start camera stream
 def start_camera():
     global videoCap, camera_running
     if not camera_running:
-        videoCap = cv2.VideoCapture(1)  # Open the webcam
+        videoCap = cv2.VideoCapture(camera_url)  # Open the webcam
         camera_running = True
 
 # Stop camera stream
